@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'irb'
+require_relative '../lib/meli_proxy'
+
+def reload!
+  root_path = File.expand_path('../lib/meli_proxy', __dir__)
+  dirs = %w[errors services validations]
+
+  dirs.each { |dir| Dir.glob("#{root_path}/#{dir}/**/*.rb").each { |f| load(f) } }
+  true
+end
+
+IRB.start
