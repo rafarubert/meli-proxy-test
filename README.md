@@ -42,7 +42,7 @@ Não faremos testes de carga, mas avaliaremos se a arquitetura utilizada é esca
     docker-compose run --rm app bash
 
 # TODO
-## Add rspsec tests
+## Add rspec tests
 - Configure envirorments for development and tests
 ## Check method for call posts requests
 
