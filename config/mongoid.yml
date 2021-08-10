@@ -3,6 +3,6 @@ development:
     default:
       database: meli_log_development
       hosts:
-        - 0.0.0.0:27017
+        - mongo:27017
       options:
         server_selection_timeout: 1
