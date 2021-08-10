@@ -11,3 +11,12 @@ services:
     command: "bundle exec puma -C puma.rb"
     volumes:
       - .:/app
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_DATABASE: meli_log_development
+    volumes:
+      - "./mongo:/etc/mongo"
+  
