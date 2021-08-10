@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LogError < StandardError
   attr_reader :status_code
 

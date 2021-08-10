@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LogRepository
   def initialize
     @log = Log
@@ -10,15 +12,15 @@ class LogRepository
     )
   end
 
-  def count_ip ip
+  def count_ip(ip)
     @log.where(ip: ip).count
   end
 
-  def count_path path
+  def count_path(path)
     @log.where(path: path).count
   end
 
-  def count_ip_path ip, path
+  def count_ip_path(ip, path)
     @log.where(ip: ip, path: path).count
   end
 end

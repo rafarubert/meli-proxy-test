@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sinatra/base'
 
 require_relative '../lib/meli_proxy'
@@ -9,7 +11,7 @@ class Server < Sinatra::Base
 
   get '/error' do
     status params[:status]
-    {'error':  params[:message] }.to_json
+    { 'error': params[:message] }.to_json
   end
 
   after do
@@ -23,7 +25,7 @@ class Server < Sinatra::Base
 
     begin
       redirect RedirectService.new.call(log), 303
-    rescue => e
+    rescue LogError => e
       redirect "/error?message=#{e.message}&status=#{e.status_code}"
     end
   end

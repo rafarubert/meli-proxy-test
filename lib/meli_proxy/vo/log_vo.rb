@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LogVo
   attr_reader :ip, :path, :fullpath
 

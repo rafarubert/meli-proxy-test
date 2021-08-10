@@ -11,7 +11,7 @@ gem 'rubocop'
 gem 'simplecov', require: false
 gem 'zeitwerk'
 
-gem 'sinatra'
 gem 'puma'
+gem 'sinatra'
 
 gem 'mongoid'

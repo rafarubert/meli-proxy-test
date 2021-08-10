@@ -1,5 +1,6 @@
-class CreateLogService
+# frozen_string_literal: true
 
+class CreateLogService
   def initialize
     @log_repository = LogRepository.new
     @log_validation = CreateLogValidation.new
