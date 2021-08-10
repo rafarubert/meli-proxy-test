@@ -29,13 +29,6 @@ Não faremos testes de carga, mas avaliaremos se a arquitetura utilizada é esca
 
 ## Build project
     docker-compose build
-
-## About project
-    docker-compose run --rm app rake about
-
-    ### Check all rake commands
-    docker-compose run --rm app rake
-
 ### run Project
     docker-compose up
 
@@ -48,6 +41,16 @@ Não faremos testes de carga, mas avaliaremos se a arquitetura utilizada é esca
 ### run linux shell
     docker-compose run --rm app bash
 
+# TODO
+## Add rspsec tests
+- Configure envirorments for development and tests
+## Check method for call posts requests
 
+**Options**
+- Simulate http request with sinatra (using views)
+- Use Net::HTTP for submit request and redirect for get path
 
-puma config.ru -C puma.rb
+## Run in background log write
+**Options**
+- Use sidekiq
+- Use Fibbers

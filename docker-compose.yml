@@ -19,4 +19,3 @@ services:
       MONGO_INITDB_DATABASE: meli_log_development
     volumes:
       - "./mongo:/etc/mongo"
-  

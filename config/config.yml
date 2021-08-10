@@ -1,0 +1,5 @@
+meli-proxy:
+  max_ip: 5
+  max_path: 5
+  max_ip_path: 2
+  redirect_url: "https://api.mercadolibre.com"
