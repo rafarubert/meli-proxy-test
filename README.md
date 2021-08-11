@@ -27,6 +27,8 @@ Não faremos testes de carga, mas avaliaremos se a arquitetura utilizada é esca
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - [Run docker without sudo(linux user only)](https://docs.docker.com/engine/install/linux-postinstall/)
 
+## Pre install
+```cp .env.sample .env```
 ## Build project
     docker-compose build
 ### run Project

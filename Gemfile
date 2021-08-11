@@ -15,3 +15,4 @@ gem 'puma'
 gem 'sinatra'
 
 gem 'mongoid'
+gem 'dotenv-rails'
