@@ -1,1 +1,3 @@
-puts "Start in development mode"
+# frozen_string_literal: true
+
+puts 'Start in development mode'
