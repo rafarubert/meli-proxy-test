@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+ENV['APP_ENV'] ||= 'development'
 
 require 'bundler/setup'
 require 'dotenv/load'
@@ -7,6 +8,8 @@ require 'mongoid'
 require 'zeitwerk'
 
 require 'yaml'
+
+require File.join(File.expand_path('../', __dir__), 'config', 'envirorments', "#{ENV['APP_ENV']}.rb")
 
 module MeliProxy
   configs = YAML.load_file(File.join(File.expand_path('../', __dir__), 'config', 'config.yml'))

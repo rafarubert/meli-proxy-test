@@ -5,6 +5,7 @@ require 'sinatra/base'
 require_relative '../lib/meli_proxy'
 
 class Server < Sinatra::Base
+  set :environment, :production
   before do
     content_type 'application/json'
   end

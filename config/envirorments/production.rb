@@ -1,0 +1,1 @@
+puts "Start in production mode"

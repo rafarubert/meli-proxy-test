@@ -1,0 +1,1 @@
+puts "Start in test mode"

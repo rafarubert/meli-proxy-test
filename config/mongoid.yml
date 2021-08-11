@@ -6,3 +6,19 @@ development:
         - <%= ENV.fetch('MONGO_HOST', '127.0.0.1:27017') %>
       options:
         server_selection_timeout: 1
+test:
+  clients:
+    default:
+      database: meli_log_test
+      hosts:
+        - <%= ENV.fetch('MONGO_HOST', '127.0.0.1:27017') %>
+      options:
+        server_selection_timeout: 1
+production:
+  clients:
+    default:
+      database: meli_log
+      hosts:
+        - <%= ENV.fetch('MONGO_HOST') %>
+      options:
+        server_selection_timeout: 1
