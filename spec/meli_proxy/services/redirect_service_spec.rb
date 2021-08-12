@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
-RSpec.describe RedirectService do
+describe RedirectService do
   subject(:redirect_service) { described_class.new.call(log_vo) }
 
   describe '.call' do
