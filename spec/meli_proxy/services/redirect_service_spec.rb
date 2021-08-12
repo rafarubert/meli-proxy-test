@@ -1,25 +1,25 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe RedirectService do
   describe '.call' do
     context 'valid log' do
-      let(:log_vo){
+      let(:log_vo) do
         LogVo.new(
           ip: '127.0.0.1',
           path: '/start',
-          fullpath: '/start'  
+          fullpath: '/start'
         )
-      }
+      end
 
       before do
         expect_any_instance_of(CreateLogService).to receive(:call)
       end
 
       it 'call CreateLogService' do
-        expect(subject.call(log_vo)).to eq 'https://api.mercadolibre.com/start'   
+        expect(subject.call(log_vo)).to eq 'https://api.mercadolibre.com/start'
       end
     end
-
-
   end
 end
