@@ -19,6 +19,6 @@ production:
     default:
       database: meli_log
       hosts:
-        - <%= ENV.fetch('MONGO_HOST') %>
+        - <%= ENV.fetch('MONGO_HOST', '127.0.0.1:27017') %>
       options:
         server_selection_timeout: 1
