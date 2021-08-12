@@ -28,6 +28,12 @@ Não faremos testes de carga, mas avaliaremos se a arquitetura utilizada é esca
 - [Run docker without sudo(linux user only)](https://docs.docker.com/engine/install/linux-postinstall/)
 
 ## Pre install
+Add into .bashrc or .zshrc
+```
+export UID
+export USER
+```
+
 ```cp .env.sample .env```
 ## Build project
     docker-compose build

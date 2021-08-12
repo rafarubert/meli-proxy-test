@@ -1,11 +1,29 @@
-FROM ruby:3.0.2
+FROM ruby:3.0.2-alpine
+
+ARG USER
+ARG UID
+
+RUN test -n "$USER"
+RUN test -n "$UID"
+
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "$(pwd)" \
+    --no-create-home \
+    --uid "$UID" \
+    "$USER"
+
+RUN apk add alpine-sdk git ruby-full ruby-dev
 
 WORKDIR /app
 
-COPY Gemfile /app/Gemfile
-COPY *Gemfile.lock /app/
+COPY --chown=${USER} Gemfile /app/Gemfile
+COPY --chown=${USER} *Gemfile.lock /app/
 
-RUN apt-get update -y\
-    && apt-get install figlet toilet -y\
-    && gem install bundler \
-    && bundle install
+RUN gem install bundler && bundle install
+
+COPY --chown=${USER} . /app
+RUN chown -R $USER /app
+
+USER "$USER"

@@ -5,7 +5,11 @@ services:
       - "8080:8080"
     stdin_open: true
     tty: true
-    build: .
+    build:
+      context: .
+      args:
+        - USER
+        - UID
     entrypoint: ./entrypoint.sh
     working_dir: /app
     command: "bundle exec puma -C puma.rb"
