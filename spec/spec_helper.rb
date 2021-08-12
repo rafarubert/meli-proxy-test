@@ -3,6 +3,8 @@
 require 'rspec'
 require 'json'
 
+require File.expand_path('lib/meli_proxy')
+
 require 'simplecov'
 
 SimpleCov.start do

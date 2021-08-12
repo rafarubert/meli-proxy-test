@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 ENV['APP_ENV'] ||= 'development'
+ENV['MONGOID_ENV'] = ENV['APP_ENV']
 
 require 'bundler/setup'
 require 'dotenv/load'
