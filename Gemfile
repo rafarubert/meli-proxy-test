@@ -16,6 +16,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec', require: false
   gem 'rubocop'
+  gem 'rubocop-rspec', require: false
   gem 'simplecov', require: false
 
   gem 'pry-byebug'
