@@ -3,9 +3,11 @@ jobs:
   build:
     docker:
       - image: ruby:3.0.2-alpine
+      - image: mongo:latest
     steps:
       - run: apk add alpine-sdk git ruby-full ruby-dev
       - checkout
       - run: gem install bundler
       - run: bundle install
+      - run: cp .env.sample .env
       - run: bundle exec rspec spec

@@ -13,6 +13,7 @@ gem 'sinatra'
 gem 'mongoid'
 
 group :development, :test do
+  gem 'database_cleaner-mongoid'
   gem 'dotenv-rails'
   gem 'rspec', require: false
   gem 'rubocop'

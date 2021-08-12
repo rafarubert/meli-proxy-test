@@ -21,7 +21,8 @@ WORKDIR /app
 COPY --chown=${USER} Gemfile /app/Gemfile
 COPY --chown=${USER} *Gemfile.lock /app/
 
-RUN chown -R $USER /app && mkdir /gems && chown -R $USER /gems
+RUN chown -R $USER /app && mkdir /gems && \
+    mkdir /mongo && chown -R $USER /gems /mongo 
 
 ENV BUNDLE_PATH="/gems"
 
