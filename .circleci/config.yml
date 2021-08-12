@@ -9,4 +9,5 @@ jobs:
       - checkout
       - run: gem install bundler
       - run: bundle install
-      - run: bundle exec rspec spec
+      - run: bundle exec rubocop
+      - run: bundle exec rspec
