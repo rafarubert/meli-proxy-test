@@ -47,7 +47,7 @@ export USER
     docker-compose run --rm app rspec
 
 ### run linux shell
-    docker-compose run --rm app bash
+    docker-compose run --rm app sh
 
 # TODO
 ## Add rspec tests

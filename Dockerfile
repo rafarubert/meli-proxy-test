@@ -21,6 +21,10 @@ WORKDIR /app
 COPY --chown=${USER} Gemfile /app/Gemfile
 COPY --chown=${USER} *Gemfile.lock /app/
 
+RUN chown -R $USER /app && mkdir /gems && chown -R $USER /gems
+
+ENV BUNDLE_PATH="/gems"
+
 RUN gem install bundler && bundle install
 
 COPY --chown=${USER} . /app
