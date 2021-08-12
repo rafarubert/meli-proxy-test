@@ -9,5 +9,4 @@ jobs:
       - checkout
       - run: gem install bundler
       - run: bundle install
-      - run: cp .env.sample .env
       - run: bundle exec rspec spec
